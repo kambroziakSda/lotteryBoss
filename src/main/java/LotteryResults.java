@@ -7,7 +7,6 @@ import java.util.List;
 public class LotteryResults {
 
     public Response getLotteryResults(List<Integer> userNumbers) {
-
         return null;
     }
 
