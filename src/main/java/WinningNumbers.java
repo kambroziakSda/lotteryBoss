@@ -1,11 +1,9 @@
 import javax.ws.rs.GET;
-import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
 /**
  * Created by krzysztof on 12.11.17.
  */
-@Path("/numbers")
 public class WinningNumbers {
 
     

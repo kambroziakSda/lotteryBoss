@@ -8,9 +8,9 @@ import java.util.List;
  */
 public class NumberGenerator {
 
-    private List<Integer> winningNumbers;
-
     private static final Logger logger = Logger.getLogger(NumberGenerator.class);
+
+    private List<Integer> winningNumbers;
 
     private List<Integer> drawWinningNumbers() {
         return Collections.emptyList();
