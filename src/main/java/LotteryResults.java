@@ -8,9 +8,7 @@ public class LotteryResults {
 
     public Response getLotteryResults(List<Integer> userNumbers) {
 
-        return Response
-                .ok("TRESC_ODPOWIEDZI")
-                .build();
+        return null;
     }
 
     private boolean isSuccess(List<Integer> numbers, List<Integer> winningNumbers) {

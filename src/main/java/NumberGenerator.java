@@ -12,12 +12,14 @@ public class NumberGenerator {
 
     private static final Logger logger = Logger.getLogger(NumberGenerator.class);
 
+    private List<Integer> drawWinningNumbers() {
+        return Collections.emptyList();
+    }
+
     public void generateNumbersOnStart() {
 
     }
 
-    private List<Integer> drawWinningNumbers() {
-        return Collections.emptyList();
-    }
+
 
 }
