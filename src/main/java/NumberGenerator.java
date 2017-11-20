@@ -12,6 +12,10 @@ public class NumberGenerator {
 
     private List<Integer> winningNumbers;
 
+    /**
+     * W implementacji tej metody można posłużyć się klasą java.util.Random
+     * @return
+     */
     private List<Integer> drawWinningNumbers() {
         return Collections.emptyList();
     }

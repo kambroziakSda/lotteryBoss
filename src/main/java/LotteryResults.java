@@ -11,6 +11,13 @@ public class LotteryResults {
         return null;
     }
 
+    /**
+     * Implmentację tej metody można oprzeć na zwykłej pętli, lub API JAVA8 (stream, filter, collect, Collectors, toList())
+     * W obu przypadkach przyda się metoda contains z interfejsu List
+     * @param numbers
+     * @param winningNumbers
+     * @return
+     */
     private boolean isSuccess(List<Integer> numbers, List<Integer> winningNumbers) {
         return false;
     }
