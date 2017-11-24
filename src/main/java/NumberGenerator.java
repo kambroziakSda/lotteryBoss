@@ -25,10 +25,12 @@ public class NumberGenerator {
     }
 
     private List<Integer> drawWinningNumbers() {
-        return new Random()
-                .ints(6, 1, 49)
+        List<Integer> nummbers = new Random()
+                .ints(6, 1, 50)
                 .mapToObj(Integer::valueOf)
                 .collect(Collectors.toList());
+        nummbers.sort(Integer::compareTo);
+        return nummbers;
 
 
     }

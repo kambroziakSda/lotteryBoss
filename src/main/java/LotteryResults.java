@@ -19,12 +19,14 @@ public class LotteryResults {
     @POST
     @Produces(MediaType.TEXT_PLAIN + "; charset=UTF-8")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response getLotteryResults(List<Integer> nums) {
+    public Response getLotteryResults(LotteryParameters lotteryParameters) {
         List<Integer> winningNumbers = numberGenerator.getWinningNumbers();
-        boolean isSuccess = isSuccess(nums, winningNumbers);
+        boolean isSuccess = isSuccess(lotteryParameters, winningNumbers);
 
         StringBuilder responseMessageBuilder = new StringBuilder();
         responseMessageBuilder
+                .append("Level= ").append(lotteryParameters.getLevel())
+                .append("\n")
                 .append("Liczby wygrywające to:")
                 .append(winningNumbers)
                 .append("\n");
@@ -40,12 +42,12 @@ public class LotteryResults {
                 .build();
     }
 
-    private boolean isSuccess(List<Integer> numbers, List<Integer> winningNumbers) {
-        return numbers
+    private boolean isSuccess(LotteryParameters lotteryParameters, List<Integer> winningNumbers) {
+        return lotteryParameters
+                .getUserNumbers()
                 .stream()
                 .filter(userNumber -> winningNumbers.contains(userNumber))
-                .findFirst()
-                .isPresent();
+                .count() >= lotteryParameters.getLevel();
     }
 
 }
