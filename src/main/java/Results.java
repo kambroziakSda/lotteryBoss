@@ -11,7 +11,7 @@ import java.util.List;
  * Created by krzysztof on 12.11.17.
  */
 @Path("/results")
-public class LotteryResults {
+public class Results {
 
     @Inject
     private NumberGenerator numberGenerator;
