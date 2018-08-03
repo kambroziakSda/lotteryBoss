@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Created by krzysztof on 12.11.17.
  */
-public class LotteryResults {
+public class Results {
 
     public Response getLotteryResults(List<Integer> userNumbers) {
 
