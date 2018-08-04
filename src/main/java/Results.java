@@ -18,7 +18,7 @@ public class Results {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN+";charest=utf8")
+    @Produces(MediaType.TEXT_PLAIN+";charset=utf8")
     public Response getLotteryResults(LotteryBossParameters lotteryBossParameters) {
         List<Integer> winningNumbers = numberGenerator.getWinningNumbers();
         boolean isSuccess = isSuccess(lotteryBossParameters.getRandomNumbers(), winningNumbers, lotteryBossParameters.getLevel());
